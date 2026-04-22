@@ -10,7 +10,6 @@ export default function Home() {
   const handleJoin = (e: React.FormEvent) => {
     e.preventDefault();
     if (roomName.trim()) {
-      // Redirige a la carpeta dinámica que creamos antes
       router.push(`/room/${roomName.trim().toLowerCase()}`);
     } else {
       alert("Por favor, escribe un nombre para la sala");
@@ -19,23 +18,22 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center p-6 font-sans">
-      {/* Decoración de fondo */}
+              <title className="text-lg font-bold text-blue-400">LLamadas Telematica</title>
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-900/20 blur-[120px] rounded-full"></div>
         <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-900/20 blur-[120px] rounded-full"></div>
       </div>
 
       <main className="max-w-md w-full text-center">
-        {/* Icono Principal */}
         <div className="mb-8 inline-flex p-4 bg-blue-600/10 border border-blue-500/20 rounded-3xl">
           <Video size={48} className="text-blue-500" />
         </div>
 
         <h1 className="text-4xl font-extrabold mb-4 tracking-tight">
-          Next<span className="text-blue-500">Call</span>
+          Optativa<span className="text-blue-500">Telematica</span>
         </h1>
         <p className="text-slate-400 mb-10 text-lg">
-          Simulación de videollamada P2P segura y rápida para proyectos de redes.
+          Simulación de videollamada segura y rápida para proyectos de redes.
         </p>
 
         {/* Formulario de Entrada */}
