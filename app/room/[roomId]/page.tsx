@@ -2,8 +2,7 @@
 import { useEffect, useRef, useState, use } from 'react';
 import { Peer } from 'peerjs';
 import Pusher from 'pusher-js';
-import { Mic, MicOff, PhoneOff, Send } from 'lucide-react';
-
+import { Mic, MicOff, PhoneOff, Send } from 'lucide-react'; 
 interface Message {
   userName: string;
   message: string;
@@ -28,7 +27,7 @@ export default function RoomPage({ params }: { params: Promise<{ roomId: string 
     if (!hasJoined) return;
 
     let peer: Peer;
-    const pusher = new Pusher("TU_KEY_DE_PUSHER", { cluster: "TU_CLUSTER" });
+    const pusher = new Pusher("9d0e9b3af88776172408", { cluster: "us2" });
     const channel = pusher.subscribe(`room-${roomId}`);
 
     const init = async () => {
