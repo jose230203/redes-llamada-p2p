@@ -36,7 +36,6 @@ export default function Home() {
           Simulación de videollamada segura y rápida para proyectos de redes.
         </p>
 
-        {/* Formulario de Entrada */}
         <form onSubmit={handleJoin} className="space-y-4">
           <div className="relative">
             <input
@@ -57,7 +56,6 @@ export default function Home() {
           </button>
         </form>
 
-        {/* Beneficios (Para que la profe vea "valor agregado") */}
         <div className="mt-12 grid grid-cols-2 gap-4">
           <div className="p-4 bg-slate-900/50 border border-slate-800 rounded-2xl text-left">
             <Zap size={20} className="text-yellow-500 mb-2" />
@@ -71,10 +69,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-
-      <footer className="mt-auto pt-10 text-slate-600 text-xs">
-        Desarrollado para la asignatura de Redes • 2026
-      </footer>
     </div>
   );
 }
