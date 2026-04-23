@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NextCall 🚀 - Sistema de Videollamada P2P & Chat
 
-## Getting Started
+Este proyecto es una aplicación de comunicación en tiempo real que permite realizar videollamadas y mensajería instantánea directamente entre navegadores. Fue desarrollado como parte de la asignatura de **Redes de Computadoras**.
 
-First, run the development server:
+## 🌐 Despliegue (Live Demo)
+La aplicación se encuentra hosteada en **Vercel** para una revisión inmediata y segura bajo protocolo HTTPS:
+🔗 https://redes-llamada-p2p-orcin.vercel.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Arquitectura de Red y Tecnologías
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+El proyecto demuestra el uso de protocolos de comunicación moderna para la transmisión de datos multimedia con baja latencia.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 📡 Protocolos Utilizados
+* **WebRTC (Web Real-Time Communication):** Protocolo base para la transmisión de audio y video sin servidores intermedios de medios.
+* **UDP (User Datagram Protocol):** Utilizado para el transporte de video, priorizando la fluidez y baja latencia sobre la recuperación de paquetes.
+* **WebSockets (TCP):** Implementados a través de **Pusher** para la capa de señalización (Signaling) y el chat en tiempo real.
+* **STUN (Session Traversal Utilities for NAT):** Servidores de Google utilizados para el descubrimiento de IP pública y cruce de Firewalls/NAT.
 
-## Learn More
+### 💻 Stack Tecnológico
+* **Framework:** [Next.js 15](https://nextjs.org/) (App Router)
+* **Lenguaje:** TypeScript
+* **P2P Engine:** [PeerJS](https://peerjs.com/)
+* **Real-time Engine:** [Pusher](https://pusher.com/)
+* **Estilos:** Tailwind CSS & Lucide Icons
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Características Principales
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1.  **Malla Dinámica (Mesh Network):** Los dispositivos se conectan automáticamente entre sí al entrar a la misma sala (Full Mesh).
+2.  **Señalización Automatizada:** No es necesario intercambiar IDs manualmente; Pusher actúa como el broker de señalización.
+3.  **Chat en Tiempo Real:** Mensajería instantánea integrada para coordinación durante la llamada.
+4.  **Diseño Responsivo:** Interfaz adaptada para dispositivos móviles y escritorio.
+5.  **Control de Periféricos:** Validación de permisos de cámara y micrófono, con opción de silenciar audio.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🔧 Instalación y Configuración Local
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Si deseas ejecutar este proyecto localmente, sigue estos pasos:
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone [https://github.com/jose230203/redes-llamada-p2p.git](https://github.com/jose230203/redes-llamada-p2p.git)
+   cd redes-llamada-p2p
